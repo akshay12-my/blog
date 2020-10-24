@@ -40,7 +40,7 @@ def post_detail(request,year,month,day,post):
         comment_form = CommentForm(data =request.POST)
 
         if comment_form.is_valid():
-            new_comment = comment.form.save(commit=False)
+            new_comment = comment_form.save(commit=False)
             new_comment.post =post 
             new_comment.save()
 
